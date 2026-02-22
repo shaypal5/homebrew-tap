@@ -3,15 +3,15 @@ class Foldermix < Formula
 
   desc "Pack a folder into a single LLM-friendly context file"
   homepage "https://github.com/shaypal5/foldermix"
-  url "https://files.pythonhosted.org/packages/1f/48/6fd78975dbb3865beb4bdf7978de2b37de8166dfeb7f28dc2fde189b2bdc/foldermix-0.1.5.tar.gz"
-  sha256 "87044d95027434b838838b48585006431812e2e5182ad12ae31830fee7c478cb"
+  url "https://files.pythonhosted.org/packages/e5/32/585e8bc59d7304fd6b4d902ee2f7d9b2ffc1c65e839f5438bfe768e18b0a/foldermix-0.1.6.tar.gz"
+  sha256 "6bc9f1d0fe00a3127f4fe861246d648ed12ee0233f11ed0dd5f47d0a66e7bf01"
   license "MIT"
-  version "0.1.5"
+  version "0.1.6"
 
   depends_on "python@3.12"
 
   def install
-    venv = virtualenv_create(libexec, "python@3.12")
+    venv = virtualenv_create(libexec, "python3.12")
     # Do not vendor compiled sdists (like pydantic-core), which can
     # force Rust/LLVM downloads. Let pip resolve platform wheels.
     venv.pip_install_and_link buildpath
