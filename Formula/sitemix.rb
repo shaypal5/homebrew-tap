@@ -6,9 +6,11 @@ class Sitemix < Formula
   url "https://files.pythonhosted.org/packages/7f/c3/4736b6489df23585d92a8c2f2b0438d7a771ac7f184f242db7920badcc61/sitemix-0.2.6.tar.gz"
   sha256 "423a42164995afa11ce5ec334a711a734d51d93b3695bf37e99367c2664d3c1d"
   license "MIT"
-  version "0.2.6"
 
   depends_on "python@3.12"
+
+  uses_from_macos "libxml2"
+  uses_from_macos "libxslt"
 
   resource "annotated-doc" do
     url "https://files.pythonhosted.org/packages/57/ba/046ceea27344560984e26a590f90bc7f4a75b06701f653222458922b558c/annotated_doc-0.0.4.tar.gz"
